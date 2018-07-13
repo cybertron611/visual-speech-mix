@@ -1,0 +1,25 @@
+script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+
+mixin sampleInput(className, bundle, classifierId)
+
+  form(id='#{className}--fileupload', class='#{className}--form #{className}--dropzone hideload', data-upload-template-id='template-upload-#{className}')
+    input(id='classifier_id', type='hidden', name='classifier_id', value='#{classifierId || ""}')
+    if className == 'use'
+      div(class='#{className}--example-images #{className}--example-images_default')
+        
+        div(class='#{className}--dropzone square')
+          label(class='#{className}--file-input-button base--button', for='#{className}--file')
+            div(class='#{className}--file-input-button-text')
+              span.base--a
+          input(id='#{className}--file', class='#{className}--file-input', type='file', name='images_file', accept='image/*', title='Choose an image to upload')
+          
+     label(for='searchWidget')
+     div(id='searchWidget')
+        input(id='search' type='search' autocomplete='off' autofocus)
+        span(id='microphone')
+
+    div(class='#{className}--url')
+      div(class='#{className}--invalid-url display-none') Invalid URL
+      div(class='#{className}--invalid-image-url display-none') The URL must end with .JPG, .GIF, or .PNG.
+     
+      input(class='#{className}--image-data-input base--input', type='hidden', name='image_data')

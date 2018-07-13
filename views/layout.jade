@@ -1,0 +1,38 @@
+html(lang='en')
+  head
+    title IKEA IBM Visual Recognition Demo
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='ct' content='#{locals.ct}')
+    meta(name='og:title' content='IBM IKEA Visual Recognition')
+    meta(name='og:description' content='Hej! Welcome to a world of inspiration for your home.s')
+    link(rel='icon', href='/images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/training.css')
+    link(rel='stylesheet', href='/css/footer.css')
+    block extra-header
+    link(rel='stylesheet', href='/css/extra.css')
+    link(rel='stylesheet', href='/css/retraining.css')
+    script(src='/js/Microphone.js')
+    script(src='/js/speechsearch.js')
+    script(src='/js/SpeechToText.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src="http://code.jquery.com/jquery-1.7.1.min.js")
+  body
+    header._demo--heading
+     <!-- include ./includes/header.jade-->
+    div.positioning-offset
+    block content
+    
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js', data-pace-options='{"ajax": false}')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.5.7/jquery.fileupload.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.5.7/jquery.iframe-transport.min.js')
+    script(src='/js/bundle.js')
+    if locals.bluemixAnalytics
+      script(src='/js/analytics.js')
+      script(src='/js/vendors/tealeaf.js')
+
+

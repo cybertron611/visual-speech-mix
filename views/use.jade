@@ -1,0 +1,9 @@
+extends ./layout.jade
+
+block content
+  .tab-panels.tab-views(role='tabpanel')
+    ul.tab-panels--tab-list.tab-views--tab-list(role='tablist')
+      li.tab-panels--tab-list-item.tab-views--tab-list-item.base--li(role='presentation')
+         
+    .tab-panels--tab-content
+      include ./includes/use.jade
